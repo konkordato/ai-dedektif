@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Dedektif - Yapay Zeka İçerik Tespit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 AI Dedektif</h1>
+            <p>Görsel veya videonun gerçek mi yoksa AI üretimi mi olduğunu anında tespit edin</p>
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-box" id="uploadBox">
+                <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+                <p>Görsel veya video yüklemek için tıklayın</p>
+                <p class="file-types">Desteklenen formatlar: JPG, PNG, GIF, MP4</p>
+                <input type="file" id="fileInput" accept="image/*,video/*" hidden>
+            </div>
+            
+            <div class="preview-section" id="previewSection" style="display: none;">
+                <img id="previewImage" src="" alt="Önizleme">
+                <video id="previewVideo" controls style="display: none;"></video>
+            </div>
+        </div>
+
+        <button class="analyze-btn" id="analyzeBtn" style="display: none;">
+            🔬 Analiz Et
+        </button>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Analiz ediliyor...</p>
+        </div>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>Analiz Sonuçları</h2>
+            <div class="result-card">
+                <div class="result-score" id="resultScore"></div>
+                <div class="result-details" id="resultDetails"></div>
+                <div class="result-explanation" id="resultExplanation"></div>
+            </div>
+            <button class="new-analysis-btn" id="newAnalysisBtn">
+                🔄 Yeni Analiz
+            </button>
+        </div>
+
+        <footer>
+            <p>© 2024 AI Dedektif | Plaza Emlak Teknoloji</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
